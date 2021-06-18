@@ -28,11 +28,9 @@ const TodoItem = ({ todo, todos, setTodos }) => {
         defaultChecked={mutableTodo.completed}
       />
       <div className="checkbox-border-wrap">
-        <span className="checkbox" onClick={toggleCompleted}>
-          {checkIcon}
-        </span>
+        <span className="checkbox">{checkIcon}</span>
       </div>
-      <p>{mutableTodo.content}</p>
+      <p onClick={toggleCompleted}>{mutableTodo.content}</p>
     </li>
   );
 };
